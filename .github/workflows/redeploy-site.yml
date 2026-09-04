@@ -1,7 +1,8 @@
 name: Redeploy billyxu.dev on release
 on:
   release:
-    types: [published, edited]
+    types: [published]
+  workflow_dispatch:
 jobs:
   redeploy:
     runs-on: ubuntu-latest
