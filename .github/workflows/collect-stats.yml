@@ -25,6 +25,9 @@ jobs:
       - name: Collect snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: a fine-grained PAT with Administration:read unlocks the
+          # traffic endpoints, which the built-in GITHUB_TOKEN cannot read.
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node scripts/collect-stats.mjs
 

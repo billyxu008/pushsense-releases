@@ -5,7 +5,12 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const token = process.env.GITHUB_TOKEN;
+// The traffic endpoints (views / clones / popular) require *user* push access.
+// The built-in Actions GITHUB_TOKEN does not qualify, so set a STATS_TOKEN
+// secret (a fine-grained PAT with Administration: read) to collect traffic.
+// Without it everything else is still collected and traffic degrades to null.
+const token = process.env.STATS_TOKEN || process.env.GITHUB_TOKEN;
+const trafficToken = process.env.STATS_TOKEN || process.env.GITHUB_TOKEN;
 const repo = process.env.GITHUB_REPOSITORY || 'billyxu008/pushsense-releases';
 if (!token) {
   console.error('GITHUB_TOKEN is required');
@@ -15,11 +20,11 @@ if (!token) {
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const historyPath = resolve(root, 'stats/history.json');
 
-async function api(path) {
+async function api(path, auth = token) {
   const res = await fetch(`https://api.github.com/repos/${repo}${path}`, {
     headers: {
       accept: 'application/vnd.github+json',
-      authorization: `Bearer ${token}`,
+      authorization: `Bearer ${auth}`,
       'x-github-api-version': '2022-11-28',
       'user-agent': 'pushsense-stats-collector',
     },
@@ -32,13 +37,24 @@ async function api(path) {
 
 const num = (value) => (Number.isFinite(value) ? value : 0);
 
+// A 403 here means the token lacks traffic access; keep the rest of the
+// snapshot rather than failing the whole run.
+async function traffic(path, fallback) {
+  try {
+    return await api(path, trafficToken);
+  } catch (error) {
+    console.warn(`skipping ${path}: ${error.message.split('\n')[0]}`);
+    return fallback;
+  }
+}
+
 const [info, releases, views, clones, referrers, paths] = await Promise.all([
   api(''),
   api('/releases?per_page=100'),
-  api('/traffic/views'),
-  api('/traffic/clones'),
-  api('/traffic/popular/referrers'),
-  api('/traffic/popular/paths'),
+  traffic('/traffic/views', null),
+  traffic('/traffic/clones', null),
+  traffic('/traffic/popular/referrers', null),
+  traffic('/traffic/popular/paths', null),
 ]);
 
 const assets = [];
@@ -63,11 +79,11 @@ const snapshot = {
   forks: num(info.forks_count),
   downloads: { total, byRelease, assets },
   traffic: {
-    views: num(views.count),
-    viewUniques: num(views.uniques),
-    clones: num(clones.count),
-    cloneUniques: num(clones.uniques),
-    daily: (views.views || []).map((day) => ({
+    views: num(views && views.count),
+    viewUniques: num(views && views.uniques),
+    clones: num(clones && clones.count),
+    cloneUniques: num(clones && clones.uniques),
+    daily: ((views && views.views) || []).map((day) => ({
       date: String(day.timestamp).slice(0, 10),
       views: num(day.count),
       uniques: num(day.uniques),
@@ -91,6 +107,18 @@ try {
   if (Array.isArray(parsed)) history = parsed;
 } catch (error) {
   if (error.code !== 'ENOENT') throw error;
+}
+
+// If traffic was unavailable this run, keep whatever the most recent snapshot
+// already recorded rather than writing zeroes over real numbers.
+if (!views && !clones && !referrers && !paths) {
+  const previous = [...history].reverse().find((entry) => entry && entry.traffic);
+  if (previous) {
+    snapshot.traffic = previous.traffic;
+    snapshot.referrers = previous.referrers || [];
+    snapshot.paths = previous.paths || [];
+    snapshot.trafficStale = true;
+  }
 }
 
 // Re-runs on the same day replace that day's entry rather than piling up.
