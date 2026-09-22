@@ -3839,5 +3839,222 @@
         "uniques": 1
       }
     ]
+  },
+  {
+    "date": "2026-09-22",
+    "collectedAt": "2026-09-22T09:19:06Z",
+    "stars": 0,
+    "watchers": 0,
+    "forks": 0,
+    "downloads": {
+      "total": 65,
+      "byRelease": {
+        "v0.2.0": 14,
+        "v0.1.0": 1,
+        "v0.0.9": 13,
+        "v0.0.8": 8,
+        "v0.0.7": 2,
+        "v0.0.6": 2,
+        "v0.0.5": 13,
+        "v0.0.4": 5,
+        "v0.0.3": 4,
+        "v0.0.2": 3,
+        "v0.0.1": 0
+      },
+      "assets": [
+        {
+          "release": "v0.2.0",
+          "name": "PushSense-0.2.0.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.0",
+          "name": "PushSense.dmg",
+          "count": 13
+        },
+        {
+          "release": "v0.1.0",
+          "name": "PushSense-0.1.0.dmg",
+          "count": 0
+        },
+        {
+          "release": "v0.1.0",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.9",
+          "name": "PushSense-0.0.9.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.9",
+          "name": "PushSense.dmg",
+          "count": 12
+        },
+        {
+          "release": "v0.0.8",
+          "name": "PushSense-0.0.8.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.8",
+          "name": "PushSense.dmg",
+          "count": 7
+        },
+        {
+          "release": "v0.0.7",
+          "name": "PushSense-0.0.7.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.7",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.6",
+          "name": "PushSense-0.0.6.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.6",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.5",
+          "name": "PushSense-0.0.5.dmg",
+          "count": 3
+        },
+        {
+          "release": "v0.0.5",
+          "name": "PushSense.dmg",
+          "count": 10
+        },
+        {
+          "release": "v0.0.4",
+          "name": "PushSense-0.0.4.dmg",
+          "count": 4
+        },
+        {
+          "release": "v0.0.4",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.3",
+          "name": "PushSense-0.0.3.dmg",
+          "count": 4
+        },
+        {
+          "release": "v0.0.2",
+          "name": "PushSense-0.0.2.dmg",
+          "count": 3
+        },
+        {
+          "release": "v0.0.1",
+          "name": "PushSense-0.0.1.dmg",
+          "count": 0
+        }
+      ]
+    },
+    "traffic": {
+      "views": 2,
+      "viewUniques": 1,
+      "clones": 97,
+      "cloneUniques": 42,
+      "daily": [
+        {
+          "date": "2026-09-08",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-09",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-10",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-11",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-12",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-13",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-14",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-15",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-16",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-17",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-18",
+          "views": 2,
+          "uniques": 1
+        },
+        {
+          "date": "2026-09-19",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-20",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-09-21",
+          "views": 0,
+          "uniques": 0
+        }
+      ]
+    },
+    "referrers": [
+      {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    ],
+    "paths": [
+      {
+        "path": "/billyxu008/pushsense-releases",
+        "count": 1,
+        "uniques": 1
+      },
+      {
+        "path": "/billyxu008/pushsense-releases/releases",
+        "count": 1,
+        "uniques": 1
+      }
+    ]
   }
 ]
