@@ -42,3 +42,12 @@ jobs:
           fi
           git commit -m "stats: $(date -u +%Y-%m-%d)"
           git push
+
+      # Rebuild billyxu.dev so /open shows today's numbers. kumonotch-releases
+      # collects at 04:07, ten minutes earlier, so one rebuild covers both apps.
+      - name: Redeploy billyxu.dev
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "VERCEL_DEPLOY_HOOK secret not set; skipping"; exit 0; fi
+          curl -fsS -X POST "$HOOK" >/dev/null && echo "deploy hook fired"
