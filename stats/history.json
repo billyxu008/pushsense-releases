@@ -16477,5 +16477,260 @@
     },
     "referrers": [],
     "paths": []
+  },
+  {
+    "date": "2026-11-14",
+    "collectedAt": "2026-11-14T11:29:37Z",
+    "stars": 0,
+    "watchers": 0,
+    "forks": 0,
+    "downloads": {
+      "total": 117,
+      "byRelease": {
+        "v0.2.5": 1,
+        "v0.2.4": 30,
+        "v0.2.3": 1,
+        "v0.2.2": 1,
+        "v0.2.1": 2,
+        "v0.2.0": 21,
+        "v0.1.0": 2,
+        "v0.0.9": 14,
+        "v0.0.8": 9,
+        "v0.0.7": 3,
+        "v0.0.6": 3,
+        "v0.0.5": 14,
+        "v0.0.4": 6,
+        "v0.0.3": 5,
+        "v0.0.2": 4,
+        "v0.0.1": 1
+      },
+      "assets": [
+        {
+          "release": "v0.2.5",
+          "name": "PushSense-0.2.5.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.5",
+          "name": "PushSense.dmg",
+          "count": 0
+        },
+        {
+          "release": "v0.2.4",
+          "name": "PushSense-0.2.4.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.4",
+          "name": "PushSense.dmg",
+          "count": 29
+        },
+        {
+          "release": "v0.2.3",
+          "name": "PushSense-0.2.3.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.3",
+          "name": "PushSense.dmg",
+          "count": 0
+        },
+        {
+          "release": "v0.2.2",
+          "name": "PushSense-0.2.2.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.2",
+          "name": "PushSense.dmg",
+          "count": 0
+        },
+        {
+          "release": "v0.2.1",
+          "name": "PushSense-0.2.1.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.1",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.2.0",
+          "name": "PushSense-0.2.0.dmg",
+          "count": 2
+        },
+        {
+          "release": "v0.2.0",
+          "name": "PushSense.dmg",
+          "count": 19
+        },
+        {
+          "release": "v0.1.0",
+          "name": "PushSense-0.1.0.dmg",
+          "count": 0
+        },
+        {
+          "release": "v0.1.0",
+          "name": "PushSense.dmg",
+          "count": 2
+        },
+        {
+          "release": "v0.0.9",
+          "name": "PushSense-0.0.9.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.9",
+          "name": "PushSense.dmg",
+          "count": 13
+        },
+        {
+          "release": "v0.0.8",
+          "name": "PushSense-0.0.8.dmg",
+          "count": 2
+        },
+        {
+          "release": "v0.0.8",
+          "name": "PushSense.dmg",
+          "count": 7
+        },
+        {
+          "release": "v0.0.7",
+          "name": "PushSense-0.0.7.dmg",
+          "count": 2
+        },
+        {
+          "release": "v0.0.7",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.6",
+          "name": "PushSense-0.0.6.dmg",
+          "count": 2
+        },
+        {
+          "release": "v0.0.6",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.5",
+          "name": "PushSense-0.0.5.dmg",
+          "count": 3
+        },
+        {
+          "release": "v0.0.5",
+          "name": "PushSense.dmg",
+          "count": 11
+        },
+        {
+          "release": "v0.0.4",
+          "name": "PushSense-0.0.4.dmg",
+          "count": 5
+        },
+        {
+          "release": "v0.0.4",
+          "name": "PushSense.dmg",
+          "count": 1
+        },
+        {
+          "release": "v0.0.3",
+          "name": "PushSense-0.0.3.dmg",
+          "count": 5
+        },
+        {
+          "release": "v0.0.2",
+          "name": "PushSense-0.0.2.dmg",
+          "count": 4
+        },
+        {
+          "release": "v0.0.1",
+          "name": "PushSense-0.0.1.dmg",
+          "count": 1
+        }
+      ]
+    },
+    "traffic": {
+      "views": 0,
+      "viewUniques": 0,
+      "clones": 182,
+      "cloneUniques": 70,
+      "daily": [
+        {
+          "date": "2026-10-31",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-01",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-02",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-03",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-04",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-05",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-06",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-07",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-08",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-09",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-10",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-11",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-12",
+          "views": 0,
+          "uniques": 0
+        },
+        {
+          "date": "2026-11-13",
+          "views": 0,
+          "uniques": 0
+        }
+      ]
+    },
+    "referrers": [],
+    "paths": []
   }
 ]
